@@ -186,6 +186,38 @@ li{
 	transition: transform 0.5s ease;
 }
 
+.card_products{
+	border: none;
+}
+
+.img_product {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    aspect-ratio: 1 / 1; /* Define uma proporção quadrada (1:1) */
+    object-fit: cover; /* Corta a imagem se necessário para manter a proporção */
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 30px; /* Ajuste o tamanho conforme necessário */
+    height: 30px; /* Ajuste o tamanho conforme necessário */
+    background-color: var(--title); /* Cor de fundo */
+    border-radius: 50%; /* Faz o fundo ser redondo */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px; /* ajuste o tamanho aqui */
+    height: 20px; /* ajuste o tamanho aqui */
+    background-size: 75%, 75%; /* opcional: para garantir que a imagem do ícone preencha o espaço */
+}
+
+
+.col_card_products{
+	padding: 0;
+}
+
 
 /* Estilo para telas menores que 992px */
 @media (max-width: 991.98px) {
@@ -197,6 +229,7 @@ li{
 	.nav_bar_items_icons{
 		margin-left: 0;
 	}
+	
 }
 
 /* Estilo para telas maiores que 992px */
