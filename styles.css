@@ -39,6 +39,16 @@
     --screen_darker: #F3F3F3;
 }
 
+.btn-primary {
+	--bs-btn-bg: var(--primary);
+	--bs-btn-border-color: var(--primary);
+	--bs-btn-hover-bg: #6E9996;
+	--bs-btn-hover-border-color: #8BAEAB;
+	--bs-btn-active-bg: #8BAEAB;
+	--bs-btn-active-border-color: #A8C2C0;
+	--bs-btn-disabled-bg: var(--primary);
+	--bs-btn-disabled-border-color: var(--primary);
+  }
 
 /* Configuração de fonte */
 @font-face {
@@ -91,6 +101,7 @@ p{
 /* Modificando configurações tragas do bootstrap */
 .navbar {
 	border-bottom: 2px solid var(--screen_darker);
+	padding: 20px 0 20px 0;
 }
 
 
@@ -115,12 +126,32 @@ a{
 }
 
 .btn_search{
-	background-color: var(--primary);
-	color: var(--placeholder);
-	border-color: var(--placeholder);
 	border-radius: 0;
+	border: none;
+	font-size: 14px;
 }
 
+.input_search{
+	background-color:var(--screen);
+	border: none;
+}
+
+.input_search::placeholder{
+	color: var(--paragraph_light);
+}
+
+.div_search{
+	background-color:var(--screen);
+	border:solid 10px var(--screen);
+	padding: 0;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.090);
+}
+
+.input-group-icon {
+	display: flex;
+	align-items: center;
+	color: var(--paragraph_light);
+}
 
 /* Estilo para telas menores que 992px */
 @media (max-width: 991.98px) {
