@@ -1,0 +1,147 @@
+/* Configuração de cores */
+:root {
+    --primary: #518581;
+    --primary_light: #6E9996;
+    --primary_lighter: #8BAEAB;
+    --primary_lightest: #A8C2C0;
+    --primary_soft: #C5D6D5;
+    --primary_softest: #DCE7E6;
+    
+    --secondary: #FFB23F;
+    --secondary_light: #FFBF5F;
+    --secondary_lighter: #FFCC7F;
+    --secondary_lightest: #FFD89F;
+    --secondary_soft: #FFE5BF;
+    --secondary_softest: #FFF0D9;
+
+    --title: #151411; 
+    --title_dark: #3C3B39;
+    --title_darker: #636260;
+    --title_darkest: #8A8988;
+    --title_soft: #B1B1B0;
+    --title_softest: #D0D0CF;
+
+    --paragraph: #AFADB5; 
+    --paragraph_light: #BCBBC1;
+    --paragraph_lighter: #CAC8CE;
+    --paragraph_lightest: #D7D6DA;
+    --paragraph_soft: #E4E4E6;
+    --paragraph_softest: #EFEFF0;
+
+    --placeholder: #F9F9F9;
+    --placeholder_light: #FAFAFA;
+    --placeholder_lighter: #FBFBFB;
+    --placeholder_lightest: #FCFCFC;
+    --placeholder_soft: #FDFDFD;
+    --placeholder_softest: #FEFEFE;
+
+    --screen: #FFFFFF;
+    --screen_darker: #F3F3F3;
+}
+
+
+/* Configuração de fonte */
+@font-face {
+    font-family: 'Eudoxus Sans';
+    src: url('Eudoxus-Sans-font/EudoxusSans-Regular.woff2') format('woff2'),
+         url('Eudoxus-Sans-font/EudoxusSans-Regular.woff') format('woff'),
+         url('Eudoxus-Sans-font/EudoxusSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eudoxus Sans';
+    src: url('Eudoxus-Sans-font/EudoxusSans-Medium.woff2') format('woff2'),
+         url('Eudoxus-Sans-font/EudoxusSans-Medium.woff') format('woff'),
+         url('Eudoxus-Sans-font/EudoxusSans-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Eudoxus Sans';
+    src: url('fonts/EudoxusSans-Bold.woff2') format('woff2'),
+         url('fonts/EudoxusSans-Bold.woff') format('woff'),
+         url('fonts/EudoxusSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Eudoxus Sans', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6, label, .font_bold{
+	font-weight: 700;
+	
+}
+
+p{
+	font-weight: 400;
+	font-size: 14px;
+	color: var(--paragraph);
+}
+
+.font_medium, a, li, ul{
+	font-weight: 500;
+}
+
+/* Modificando configurações tragas do bootstrap */
+.navbar {
+	border-bottom: 2px solid var(--screen_darker);
+}
+
+
+.navbar-toggler, .dropdown-menu {
+    border: none;
+}
+
+.nav-link{
+	color: var(--title);
+}
+
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.navbar_title{
+	font-weight: 700;
+}
+
+a{
+	text-decoration: none;
+}
+
+.btn_search{
+	background-color: var(--primary);
+	color: var(--placeholder);
+	border-color: var(--placeholder);
+	border-radius: 0;
+}
+
+
+/* Estilo para telas menores que 992px */
+@media (max-width: 991.98px) {
+    .nav_bar_items {
+        text-align: left; /* Alinha os itens à esquerda */
+        justify-content: flex-start; /* Alinha os itens à esquerda */
+    }
+
+	.nav_bar_items_icons{
+		margin-left: 0;
+	}
+}
+
+/* Estilo para telas maiores que 992px */
+@media (min-width: 991.98px) {
+    .nav_bar_items {
+        text-align: center;
+        justify-content: none;
+    }
+
+	.nav_bar_items_icons{
+		margin-left: 16px;
+	}
+}
