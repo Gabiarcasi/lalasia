@@ -78,6 +78,7 @@
     font-style: normal;
 }
 
+/* Arquivo inteiro */
 body {
     font-family: 'Eudoxus Sans', sans-serif;
 }
@@ -88,21 +89,51 @@ h1, h2, h3, h4, h5, h6, label, .font_bold{
 	
 }
 
+.card{
+	border: none;
+}
+
 p{
 	font-weight: 400;
 	font-size: 14px;
 	color: var(--paragraph);
 }
 
+a{
+	text-decoration: none;
+}
+
+.btn{
+	border-radius: 0;
+	border: none;
+	font-size: 14px;
+	border: 2px solid var(--primary);
+}
+
+.btn:hover{
+	background-color: transparent;
+	color: var(--primary);
+}
+
 .font_medium, a, li, ul{
 	font-weight: 500;
 }
 
+li{
+	white-space: nowrap;
+}
+
+.title_secondary{
+	font-weight: 700;
+	color: var(--secondary);
+	font-size: 1.2em;
+}
+
+/* Navbar */
 .navbar {
 	border-bottom: 2px solid var(--screen_darker);
 	padding: 20px 0 20px 0;
 }
-
 
 .navbar-toggler, .dropdown-menu {
     border: none;
@@ -120,16 +151,7 @@ p{
 	font-weight: 700;
 }
 
-a{
-	text-decoration: none;
-}
-
-.btn{
-	border-radius: 0;
-	border: none;
-	font-size: 14px;
-}
-
+/* Section Main*/
 .input_search{
 	background-color:var(--screen);
 	border: none;
@@ -152,16 +174,7 @@ a{
 	color: var(--paragraph_light);
 }
 
-li{
-	white-space: nowrap;
-}
-
-.title_secondary{
-	font-weight: 700;
-	color: var(--secondary);
-	font-size: 1.2em;
-}
-
+/* Section Benefits */
 .card_benefits{
 	border:none;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.07);
@@ -172,34 +185,33 @@ li{
     overflow: hidden;
 }
 
-.btn{
-	border: 2px solid var(--primary);
-}
-
-.btn:hover{
-	background-color: transparent;
-	color: var(--primary);
-}
-
 .btn_learn_more:hover i{
 	transform: translateX(100%); 
 	transition: transform 0.5s ease;
 }
 
-.card_products{
-	border: none;
+/* Container Product */
+.carousel-inner {
+	height: auto;
 }
-
+  
+.carousel-item {
+	height: auto;
+}
+  
 .img_product {
-    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    aspect-ratio: 1 / 1; /* Define uma proporção quadrada (1:1) */
-    object-fit: cover; /* Corta a imagem se necessário para manter a proporção */
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 }
-
-
+  
 .carousel-control-prev,
 .carousel-control-next {
+	top: 50%;
+	transform: translateY(-50%);
+	align-items: center;
+	justify-content: center;
     width: 30px; /* Ajuste o tamanho conforme necessário */
     height: 30px; /* Ajuste o tamanho conforme necessário */
     background-color: var(--title); /* Cor de fundo */
@@ -213,13 +225,47 @@ li{
     background-size: 75%, 75%; /* opcional: para garantir que a imagem do ícone preencha o espaço */
 }
 
-
-.col_card_products{
-	padding: 0;
+.animate_lazy{
+	opacity: 0;
+	filter: blur(10px);
+	transform: translateY(-10%);
+	transition: all 2s;
 }
 
+.show{
+	opacity: 1;
+	filter: blur(0);
+	transform: translateY(0);
+	transition: all 1s;
+}
 
-/* Estilo para telas menores que 992px */
+/* Media Queries Section Product*/
+@media (min-width: 768px) {
+	.carousel-item .row {
+	  	display: flex;
+	}
+	
+	.carousel-item .col {
+	  	display: block;
+	}
+}
+  
+  @media (max-width: 767px) {
+	.carousel-item .row {
+	  	display: block;
+	}
+	
+	.carousel-item .col {
+	  	display: block;
+	  	margin-bottom: 1rem;
+	}
+	
+	.carousel-item .col:not(:first-child) {
+	  	display: none;
+	}
+}
+
+/* Media Queries Nav Bar */
 @media (max-width: 991.98px) {
     .nav_bar_items {
         text-align: left;
@@ -232,7 +278,6 @@ li{
 	
 }
 
-/* Estilo para telas maiores que 992px */
 @media (min-width: 991.98px) {
     .nav_bar_items {
         text-align: center;
