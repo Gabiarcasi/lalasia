@@ -1,10 +1,8 @@
-// Função para redimensionar a imagem
 function resizeImage() {
     var contentHeight = $('.conteudo_col_1').outerHeight();
     $('#img-2').css('height', contentHeight); 
 }
 
-// Função para animar a contagem
 function animateCount(selector, start, end, duration) {
     let startTimestamp = null;
 
@@ -12,7 +10,6 @@ function animateCount(selector, start, end, duration) {
         if (!startTimestamp) startTimestamp = timestamp;
         const progress = Math.min((timestamp - startTimestamp) / duration, 1);
         
-        // Calcula o valor atual
         const currentValue = Math.floor(progress * (end - start) + start);
         $(selector).text(currentValue + '+');
         
@@ -24,16 +21,13 @@ function animateCount(selector, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
-// Função para inicializar observadores
 function initObservers() {
-    // Observer para animação
     const myObserverAnimate = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             $(entry.target).toggleClass('show', entry.isIntersecting);
         });
     });
 
-    // Observer para imagens lazy load
     const myObserverLazy = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -45,34 +39,31 @@ function initObservers() {
                     img.removeAttr('data-src');
 
                     if (img.attr('alt') === "Produto 1") {
-                        img.on('load', resizeImage); // Redimensiona a imagem após o carregamento
+                        img.on('load', resizeImage);
                     }
                 }
             }
         });
     });
 
-    // Observer para animação de contagem
+
     const countElements = $('#experience, #clients, #projects');
     const countObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                // Inicia a animação de contagem
+
                 animateCount("#experience", 0, 20, 2000);
                 animateCount("#clients", 0, 483, 2000);
                 animateCount("#projects", 0, 150, 2000);
                 
-                // Desobserva o elemento após a animação
                 countObserver.unobserve(entry.target);
             }
         });
     });
 
-    // Seleciona elementos
     const lazyImages = $('img[loading="lazy"]');
     const elements = $('.animate_lazy');
     
-    // Observa os elementos de animação e lazy load
     elements.each(function() {
         myObserverAnimate.observe(this);
     });
@@ -84,13 +75,41 @@ function initObservers() {
     });
 }
 
-// Document ready function
 $(document).ready(function() {
-    initObservers(); // Inicializa os observadores
-    resizeImage(); // Redimensiona a imagem na carga inicial
+    initObservers();
+    resizeImage();
+
+	var $carousel = $('#productCarousel');
+    var $carouselInner = $carousel.find('.carousel_inner_product');
+    var originalState = $carouselInner.html();
+    var isMobile = $(window).width() < 768;
+
+    function adjustCarousel() {
+        var newIsMobile = $(window).width() < 768;
+        
+        if (newIsMobile !== isMobile) {
+            isMobile = newIsMobile;
+            
+            if (isMobile) {
+                $carousel.find('.carousel_item_product').each(function() {
+                    $(this).find('.col_product').each(function(index) {
+                        if (index > 0) {
+                            $(this).wrap('<div class="carousel-item carousel_item_product"></div>').parent().appendTo($carouselInner);
+                        }
+                    });
+                });
+            } else {
+                $carouselInner.html(originalState);
+            }
+            
+            $carousel.carousel('dispose').carousel();
+        }
+    }
+
+    adjustCarousel();
+    $(window).on('resize', adjustCarousel);
 });
 
-// Redimensiona a imagem ao alterar o tamanho da janela
 $(window).resize(function() {
     resizeImage();
 });

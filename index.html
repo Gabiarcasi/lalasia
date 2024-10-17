@@ -159,18 +159,18 @@
 				<div class="col-md-2"></div>
 				<div class="col-12 col-md-8 text-center">
 					<p>Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient.</p>
-			  	</div>
+				</div>
 				<div class="col-md-2"></div>
 			</div>
-			<div id="productCarousel" class="carousel slide" bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
+			<div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner carousel_inner_product">
+					<div class="carousel-item carousel_item_product active">
 						<div class="row row-cols-1 row-cols-md-3 g-4">
-							<div class="col">
+							<div class="col col_product">
 								<div class="card-wrapper card_wrapper_product">
 									<div class="card card_product h-100">
 										<div class="card-body d-flex flex-column">
-											<img data-src="images/product_Bookshelf.png" class="mb-2 img-fluid img_product" alt="Bookshelf" loading="lazy">
+											<img src="images/product_Bookshelf.png" class="mb-2 img-fluid img_product" alt="Bookshelf" loading="lazy">
 											<h6 class="card-subtitle mb-2 text-muted">Living Room</h6>
 											<h5 class="card-title mb-2">Estante de Madeira</h5>
 											<p>Inteiramente Madeira</p>
@@ -178,12 +178,12 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col d-none d-md-block">
+							</div> 
+							<div class="col col_product">
 								<div class="card-wrapper card_wrapper_product">
 									<div class="card card_product h-100">
 										<div class="card-body d-flex flex-column">
-											<img data-src="images/product_chair.png" class="mb-2 img-fluid img_product" alt="Chair" loading="lazy">
+											<img src="images/product_chair.png" class="mb-2 img-fluid img_product" alt="Chair" loading="lazy">
 											<h6 class="card-subtitle mb-2 text-muted">Chair</h6>
 											<h5 class="card-title mb-2">White Aesthetic Chair</h5>
 											<p>Combination of wood and wool</p>
@@ -192,11 +192,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="col d-none d-md-block">
+							<div class="col col_product">
 								<div class="card-wrapper card_wrapper_product">
 									<div class="card card_product h-100">
 										<div class="card-body d-flex flex-column">
-											<img data-src="images/product_lamp.png" class="mb-2 img-fluid img_product" alt="Lamp" loading="lazy">
+											<img src="images/product_lamp.png" class="mb-2 img-fluid img_product" alt="Lamp" loading="lazy">
 											<h6 class="card-subtitle mb-2 text-muted">Lamp</h6>
 											<h5 class="card-title mb-2">Bardono Smart Lamp</h5>
 											<p>Easy to use with bluetooth connection</p>
@@ -207,13 +207,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="carousel-item">
+					<div class="carousel-item carousel_item_product">
 						<div class="row row-cols-1 row-cols-md-3 g-4">
-							<div class="col">
+							<div class="col col_product">
 								<div class="card-wrapper card_wrapper_product">
 									<div class="card card_product h-100">
 										<div class="card-body d-flex flex-column">
-											<img data-src="images/product_banget.png" class="mb-2 img-fluid img_product" alt="Sofa" loading="lazy">
+											<img src="images/product_banget.png" class="mb-2 img-fluid img_product" alt="Sofa" loading="lazy">
 											<h6 class="card-subtitle mb-2 text-muted">Sofa</h6>
 											<h5 class="card-title mb-2">Sofa Empuk Banget</h5>
 											<p>Using kapuk randu material</p>
@@ -266,7 +266,7 @@
 			<div class="row d-flex align-items-stretch">
 				<div class="col-12 col-md-6 primary_col d-flex flex-column">
 					<div class="conteudo_col_1 pb-3 pb-md-0">
-						<p class="">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient. morbi fermentum, vivamus et accumsan dui tincidunt pulvinar</p>
+						<p>Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non purus parturient. morbi fermentum, vivamus et accumsan dui tincidunt pulvinar</p>
 						
 						<div class="row">
 							<div class="col-12 col-md-5">
@@ -360,6 +360,167 @@
 			  	</div>
 			</div>
 		</section>
+
+		<section class="container py-5 animate_lazy">
+			<div class="row">
+				<!-- Coluna 1 - Articles -->
+				<div class="col-md-6 d-flex flex-column articles_col_1">
+					<div class="row">
+						<div class="col-12">
+							<p class="title_secondary">Articles</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<h2>The best furniture comes from Lalasia</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<p>Pellentesque etiam blandit in tincidunt at donec.</p>
+						</div>
+					</div>
+					<div class="row flex-grow-1">
+						<div id="carousel_articles" class="carousel slide carousel-fade col-12" data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img data-src="images/article_createcozy.png" class="d-block w-100" alt="..." loading="lazy">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>First slide label</h5>
+										<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img data-src="images/article_6waystogive.png" class="d-block w-100" alt="..." loading="lazy">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Second slide label</h5>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img data-src="images/article_howtomake.png" class="d-block w-100" alt="..." loading="lazy">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Third slide label</h5>
+										<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<img data-src="images/article_elementstoadd.png" class="d-block w-100" alt="..." loading="lazy">
+									<div class="carousel-caption d-none d-md-block">
+										<h5>Four slide label</h5>
+										<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-controls carousel_controls_articles">
+								<a class="carousel-control-prev carousel_control_prev_articles" data-bs-target="#carousel_articles" data-bs-slide="prev" role="button">
+									<i class="fa-solid fa-arrow-left carousel-control-prev-icon carousel_control_prev_icon_articles" aria-hidden="true"></i>
+								</a>
+								<a class="carousel-control-next carousel_control_next_articles" data-bs-target="#carousel_articles" data-bs-slide="next" role="button">
+									<i class="fa-solid fa-arrow-right carousel-control-next-icon carousel_control_next_icon_articles" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+		
+				<!-- Coluna 2 - Cards -->
+				<div class="col-md-6 d-none d-md-flex flex-column articles_col_2">
+					<div class="row flex-grow-1">
+						<div class="card h-100 card_articles">
+							<div class="card-body row">
+								<div class="col-5">
+									<img data-src="images/article_createcozy.png" class="mb-2 img-fluid" alt="" loading="lazy">
+								</div>
+								<div class="col-7">
+									<p class="card-text">Tips and Trick</p>
+									<h6>Create Cozy Dinning Room Vibes</h6>
+									<p class="card-text text-truncate">Decorating with neutrals brings balance to the dining room. With eclectic decoration on the sides, Caruso Dining Table and Cyrillo Dining Chairs elevate the tonal base of the room. The modern furniture set gives personality to any space in all types of architecture. The wide volume enables everyone to sit back and relax, be it in the dining room, conference, or office.</p>
+									<div class="row">
+										<div class="col-9 d-flex">
+											<img data-src="images/user_1.png" class="me-2 image_users img-fluid" alt="" loading="lazy">
+											<p class="font_bold font_black font_10 mb-2">Berry Gunawan</p>
+										</div>
+										<div class="col-3 d-flex justify-content-end">
+											<p class="font_10">Friday, 1 April 2022</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row flex-grow-1">
+						<div class="card h-100 card_articles">
+							<div class="card-body row">
+								<div class="col-5 row">
+									<img data-src="images/article_6waystogive.png" class="mb-2 img-fluid image_mini_article" alt="" loading="lazy">
+								</div>
+								<div class="col-7">
+									<p class="card-text">Tips and Trick</p>
+									<h6>6 ways to give your home minimalistic vibes</h6>
+									<p class="card-text text-truncate">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .</p>
+									<div class="row">
+										<div class="col-9 d-flex">
+											<img data-src="images/user_2.png" class="me-2 image_users img-fluid" alt="" loading="lazy">
+											<p class="font_bold font_black font_10 mb-2">By Jerremy Jean</p>
+										</div>
+										<div class="col-3 d-flex justify-content-end">
+											<p class="font_10">Friday, 1 April 2022</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row flex-grow-1">
+						<div class="card h-100 card_articles">
+							<div class="card-body row">
+								<div class="col-5">
+									<img data-src="images/article_6waystogive.png" class="mb-2 img-fluid" alt="" loading="lazy">
+								</div>
+								<div class="col-7">
+									<p class="card-text">Design Inspiration</p>
+									<h6>How to make your interiors cooler and more stylish</h6>
+									<p class="card-text text-truncate">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .</p>
+									<div class="row">
+										<div class="col-9 d-flex">
+											<img data-src="images/user_1.png" class="me-2 image_users img-fluid" alt="" loading="lazy">
+											<p class="font_bold font_black font_10 mb-2">By Michaela Augus</p>
+										</div>
+										<div class="col-3 d-flex justify-content-end">
+											<p class="font_10">Friday, 1 April 2022</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row flex-grow-1">
+						<div class="card h-100 card_articles">
+							<div class="card-body row">
+								<div class="col-5">
+									<img data-src="images/article_howtomake.png" class="mb-2 img-fluid" alt="" loading="lazy">
+								</div>
+								<div class="col-7">
+									<p class="card-text">Tips and Trick</p>
+									<h6>Elements to add character to your space</h6>
+									<p class="card-text text-truncate">Pellentesque etiam blandit in tincidunt at donec. Eget ipsum .</p>
+									<div class="row">
+										<div class="col-9 d-flex">
+											<img data-src="images/user_1.png" class="me-2 image_users img-fluid" alt="" loading="lazy">
+											<p class="font_black font_10 mb-2">By Kim Gurameh</p>
+										</div>
+										<div class="col-3 d-flex justify-content-end">
+											<p class="font_10">Friday, 1 April 2022</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>		
 
 		<section class="container py-5 flex-grow-1 animate_lazy">
 			<div class="row">

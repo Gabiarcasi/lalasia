@@ -85,8 +85,15 @@ body {
 
 
 h1, h2, h3, h4, h5, h6, label, .font_bold{
-	font-weight: 700;
-	
+	font-weight: 700;	
+}
+
+.font_10{
+	font-size: 10px;
+}
+
+.font_black{
+	color: var(--title);
 }
 
 .card{
@@ -212,17 +219,17 @@ li{
 	transform: translateY(-50%);
 	align-items: center;
 	justify-content: center;
-    width: 30px; /* Ajuste o tamanho conforme necessário */
-    height: 30px; /* Ajuste o tamanho conforme necessário */
-    background-color: var(--title); /* Cor de fundo */
-    border-radius: 50%; /* Faz o fundo ser redondo */
+    width: 30px;
+    height: 30px;
+    background-color: var(--title);
+    border-radius: 50%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 20px; /* ajuste o tamanho aqui */
-    height: 20px; /* ajuste o tamanho aqui */
-    background-size: 75%, 75%; /* opcional: para garantir que a imagem do ícone preencha o espaço */
+    width: 20px; 
+    height: 20px;
+    background-size: 75%, 75%;
 }
 
 .animate_lazy{
@@ -244,12 +251,73 @@ li{
 }
 
 .image_users {
-	border-radius: 50%; /* Faz com que a imagem fique redonda */
-	width: 20px; /* Defina um tamanho fixo, por exemplo, 100px */
-	height: 20px; /* O mesmo valor para altura, mantendo o formato quadrado */
-	object-fit: cover; /* Faz o corte da imagem para caber no espaço */
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	object-fit: cover;
   }
+
+  .carousel_controls_articles {
+	display: flex;
+	gap: 0px; /* Espaçamento entre os botões */
+	position: relative;
+  }
+
+.carousel_control_prev_articles,
+.carousel_control_next_articles {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  top: 100%;
+  transform: translateY(-50%);
+}
+
+.carousel_control_prev_articles {
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.carousel_control_prev_icon_articles {
+	color: var(--primary);
+}
+
+/* Estilo para o botão Next */
+.carousel_control_next_articles {
+  background-color: var(--primary); 
+  border-radius: 0;
+}
+
+.carousel_control_next_icon_articles {
+	background-image: none;
+	color: #fff;
+}
+
+.carousel_control_prev_icon_articles,
+.carousel_control_next_icon_articles {
+  width: 20px;
+  height: 20px;
+}
   
+.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Garantir que as imagens da coluna 2 sejam quadradas */
+.image_mini_article {
+    width: 100%;
+    height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+    aspect-ratio: 1/1; /* Garante que a imagem seja quadrada */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+/* Define a altura máxima da coluna 2 igual à da coluna 1 */
+.articles_col_2 {
+    max-height: 100%; /* Limita a altura da coluna 2 à altura da coluna 1 */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse essa altura */
+}
+
 
 /* Media Queries Section Product*/
 @media (min-width: 768px) {
